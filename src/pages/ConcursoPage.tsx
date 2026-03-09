@@ -168,11 +168,11 @@ export function ConcursoPage() {
           </article>
           <article>
             <h3>Lugar</h3>
-            <p>Instituto Tecnologico de Morelia, Michoacan</p>
+            <p>Sala O, edificio O, Campus 1 (Instituto Tecnologico de Morelia)</p>
           </article>
           <article>
             <h3>Modalidad</h3>
-            <p>Presencial, equipos de hasta 3 integrantes</p>
+            <p>Presencial</p>
           </article>
           <article>
             <h3>Plataforma</h3>
@@ -306,11 +306,11 @@ export function ConcursoPage() {
         onClose={() => setOpenModal(null)}
         title="Datos bancarios"
       >
-        <p>Banco: Por confirmar</p>
-        <p>Cuenta/CLABE: Por confirmar</p>
-        <p>Titular: Por confirmar</p>
+        <p>Banco: Banamex</p>
+        <p>CLABE: 0024 7044 7400 7263 08</p>
+        <p>Titular: Aurelio Amaury Coria Ramirez</p>
         <p>Monto: $100.00 MXN</p>
-        <p>Concepto: Concurso 1.er aniversario CAP ITM (actividad 61 aniversario Tec) + nombre del equipo</p>
+        <p>Concepto: Inscripcion + nombre del equipo</p>
       </Modal>
 
       <Modal
