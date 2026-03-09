@@ -40,6 +40,7 @@
   border: 1px solid rgba(255, 241, 209, 0.7);
   background: rgba(255, 248, 233, 0.14);
   line-height: 0;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .brand-logo {
@@ -83,6 +84,7 @@
   color: #fff5e9;
   font-weight: 600;
   font-size: 0.95rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-link:hover {
@@ -121,7 +123,7 @@
   border-radius: 999px;
   border: 0;
   position: relative;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .mobile-nav-link::after {
@@ -345,6 +347,7 @@
 
 .links a {
   color: var(--color-guinda-700);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .inline-actions {
@@ -362,6 +365,7 @@
   cursor: pointer;
   display: inline-block;
   font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .button.primary {
@@ -390,6 +394,10 @@
 
 .button.soft:hover {
   background: var(--color-mostaza-300);
+}
+
+.button:active {
+  transform: translateY(0);
 }
 
 .timeline {
@@ -448,6 +456,7 @@
   margin: 0.28rem 0;
   color: #ffeec8;
   text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .footer-block a:hover {
@@ -520,6 +529,7 @@
   background: #f0dfb5;
   color: #5e3a12;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .modal-content {
@@ -529,6 +539,77 @@
 
 .modal-content p {
   margin-top: 0;
+}
+
+.button:focus-visible,
+.nav-link:focus-visible,
+.mobile-nav-link:focus-visible,
+.footer-block a:focus-visible,
+.links a:focus-visible,
+.modal-header button:focus-visible,
+.brand:focus-visible {
+  outline: 2px solid #f2c766;
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .brand:hover {
+    background: rgba(255, 237, 193, 0.16);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(22, 9, 15, 0.2);
+  }
+
+  .nav-link:hover {
+    background: rgba(255, 237, 193, 0.22);
+    transform: translateY(-1px);
+  }
+
+  .mobile-nav-link:hover {
+    color: #f9d27d;
+    transform: translateY(-1px);
+  }
+
+  .mobile-nav-link:hover::after {
+    width: 14px;
+  }
+
+  .button.primary:hover {
+    background: var(--color-guinda-900);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(62, 8, 26, 0.26);
+  }
+
+  .button.ghost:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 242, 233, 0.92);
+    transform: translateY(-1px);
+  }
+
+  .button.soft:hover {
+    background: var(--color-mostaza-300);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(90, 62, 15, 0.18);
+  }
+
+  .footer-block a:hover {
+    color: #fff5d8;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 245, 216, 0.6);
+    transform: translateX(2px);
+  }
+
+  .links a:hover {
+    color: #5f0f29;
+    text-decoration: underline;
+    text-decoration-color: rgba(95, 15, 41, 0.45);
+  }
+
+  .modal-header button:hover {
+    background: #e7c25b;
+    color: #4d2f08;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(94, 58, 18, 0.18);
+  }
 }
 
 @media (max-width: 960px) {
