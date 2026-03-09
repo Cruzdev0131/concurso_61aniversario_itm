@@ -314,11 +314,27 @@
   color: rgba(255, 244, 232, 0.92);
 }
 
+.footer-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+
+.footer-line svg {
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
 .footer-block a {
   display: block;
   margin: 0.28rem 0;
   color: #ffeec8;
   text-decoration: none;
+}
+
+.footer-block a svg {
+  margin-right: 0.35rem;
+  vertical-align: -2px;
 }
 
 .footer-block a:hover {
