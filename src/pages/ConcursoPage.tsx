@@ -101,7 +101,7 @@ export function ConcursoPage() {
         <div className="grid">
           <article>
             <h3>Fecha</h3>
-            <p>Por confirmar</p>
+            <p>Miercoles 25 de marzo de 2026</p>
           </article>
           <article>
             <h3>Horario</h3>
