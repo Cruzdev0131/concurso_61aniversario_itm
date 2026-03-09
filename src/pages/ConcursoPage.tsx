@@ -13,7 +13,7 @@ const confettiPieces = [
 ]
 
 export function ConcursoPage() {
-  const [openModal, setOpenModal] = useState<'registro' | 'banco' | null>(null)
+  const [openModal, setOpenModal] = useState<'registro' | 'banco' | 'omegaup' | null>(null)
   const prefersReducedMotion = useReducedMotion()
 
   return (
@@ -115,6 +115,26 @@ export function ConcursoPage() {
             <h3>Modalidad</h3>
             <p>Presencial, equipos de hasta 3 integrantes</p>
           </article>
+          <article>
+            <h3>Plataforma</h3>
+            <p>La competencia se llevara a cabo en omegaUp.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="card">
+        <h2>Plataforma oficial de competencia</h2>
+        <p>
+          El concurso se realizara en <strong>omegaUp</strong>. Te recomendamos crear o
+          verificar tu cuenta antes del evento.
+        </p>
+        <div className="inline-actions">
+          <a className="button primary" href="https://omegaup.com/" target="_blank" rel="noreferrer">
+            Ir a omegaUp
+          </a>
+          <button className="button soft" type="button" onClick={() => setOpenModal('omegaup')}>
+            Que es omegaUp
+          </button>
         </div>
       </section>
 
@@ -184,6 +204,22 @@ export function ConcursoPage() {
         <p>Cuenta/CLABE: Por confirmar</p>
         <p>Titular: Por confirmar</p>
         <p>Concepto: Concurso 1.er aniversario CAP ITM (actividad 61 aniversario Tec) + nombre del equipo</p>
+      </Modal>
+
+      <Modal
+        isOpen={openModal === 'omegaup'}
+        onClose={() => setOpenModal(null)}
+        title="Que es omegaUp"
+      >
+        <p>
+          omegaUp es una plataforma de programacion competitiva donde resuelves problemas,
+          envias tu codigo y recibes veredicto automatico.
+        </p>
+        <ul>
+          <li>Permite competir en tiempo real con ranking.</li>
+          <li>Evalua soluciones con casos de prueba.</li>
+          <li>Es una plataforma ampliamente usada en Mexico y LATAM.</li>
+        </ul>
       </Modal>
     </AnimatedPage>
   )
