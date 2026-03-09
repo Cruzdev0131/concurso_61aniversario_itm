@@ -264,6 +264,17 @@
   max-width: 72ch;
 }
 
+.limit-hype {
+  margin: 0.75rem 0 0;
+  display: inline-block;
+  font-weight: 800;
+  color: #ffe29c;
+  background: rgba(23, 6, 12, 0.28);
+  border: 1px solid rgba(255, 220, 136, 0.55);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+}
+
 .hero-actions {
   margin-top: 1.1rem;
   display: flex;
@@ -284,10 +295,50 @@
   margin-bottom: 0.7rem;
 }
 
+.limited-card {
+  border-color: rgba(180, 77, 40, 0.35);
+  background:
+    linear-gradient(180deg, rgba(255, 240, 228, 0.85), rgba(255, 252, 247, 0.96));
+}
+
+.limited-card p {
+  margin: 0.45rem 0;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 0.8rem;
+}
+
+.countdown-grid {
+  margin-top: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(90px, 1fr));
+  gap: 0.65rem;
+}
+
+.countdown-unit {
+  border: 1px solid #e8ddd8;
+  border-radius: 12px;
+  padding: 0.8rem 0.55rem 0.68rem;
+  background: #fffaf6;
+  text-align: center;
+}
+
+.countdown-value {
+  margin: 0;
+  font-size: clamp(1.35rem, 3.7vw, 2rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-guinda-700);
+}
+
+.countdown-label {
+  margin: 0.26rem 0 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #6a4f57;
 }
 
 .grid article,
@@ -710,6 +761,10 @@
     grid-template-columns: 1fr;
   }
 
+  .countdown-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .photo-card img {
     height: 160px;
   }
@@ -828,6 +883,11 @@
 
   .subtitle {
     font-size: 0.95rem;
+  }
+
+  .limit-hype {
+    font-size: 0.86rem;
+    padding: 0.32rem 0.62rem;
   }
 
   .eyebrow {

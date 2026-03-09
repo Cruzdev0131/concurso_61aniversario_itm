@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AnimatedPage } from '../components/AnimatedPage'
 import { Modal } from '../components/Modal'
@@ -12,9 +12,35 @@ const confettiPieces = [
   { id: 6, top: 30, left: 94, size: 6, color: '#ffd97a', delay: 1.1 },
 ]
 
+const EVENT_DATE = new Date('2026-03-25T09:00:00-06:00')
+
+function getTimeLeft() {
+  const diff = EVENT_DATE.getTime() - Date.now()
+
+  if (diff <= 0) {
+    return { days: 0, hours: 0, minutes: 0, seconds: 0, ended: true }
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24))
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24)
+  const minutes = Math.floor((diff / (1000 * 60)) % 60)
+  const seconds = Math.floor((diff / 1000) % 60)
+
+  return { days, hours, minutes, seconds, ended: false }
+}
+
 export function ConcursoPage() {
   const [openModal, setOpenModal] = useState<'registro' | 'banco' | 'omegaup' | null>(null)
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft)
   const prefersReducedMotion = useReducedMotion()
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeLeft())
+    }, 1000)
+
+    return () => clearInterval(timer)
+  }, [])
 
   return (
     <AnimatedPage className="page">
@@ -94,6 +120,38 @@ export function ConcursoPage() {
           Programacion Competitiva ITM, realizado como actividad del 61 aniversario del Tec.
           Encuentra aqui toda la informacion operativa del evento.
         </p>
+        <p className="limit-hype">
+          Cupo limitado: maximo 10 equipos. No te quedes afuera.
+        </p>
+      </section>
+
+      <section className="card">
+        <h2>Cuenta regresiva al concurso</h2>
+        <p className="subtitle">
+          Inicio programado para el miercoles 25 de marzo de 2026 a las 09:00 h (hora del centro de Mexico).
+        </p>
+        {timeLeft.ended ? (
+          <p><strong>El concurso ya esta en curso o finalizo.</strong></p>
+        ) : (
+          <div className="countdown-grid" aria-label="Cuenta regresiva">
+            <article className="countdown-unit">
+              <p className="countdown-value">{timeLeft.days}</p>
+              <p className="countdown-label">Dias</p>
+            </article>
+            <article className="countdown-unit">
+              <p className="countdown-value">{timeLeft.hours}</p>
+              <p className="countdown-label">Horas</p>
+            </article>
+            <article className="countdown-unit">
+              <p className="countdown-value">{timeLeft.minutes}</p>
+              <p className="countdown-label">Minutos</p>
+            </article>
+            <article className="countdown-unit">
+              <p className="countdown-value">{timeLeft.seconds}</p>
+              <p className="countdown-label">Segundos</p>
+            </article>
+          </div>
+        )}
       </section>
 
       <section className="card">
@@ -119,7 +177,44 @@ export function ConcursoPage() {
             <h3>Plataforma</h3>
             <p>La competencia se llevara a cabo en omegaUp.</p>
           </article>
+          <article>
+            <h3>Cuota de recuperacion</h3>
+            <p>$100.00 MXN por equipo</p>
+          </article>
+          <article>
+            <h3>Cupo maximo</h3>
+            <p>10 equipos en total (cupo limitado)</p>
+          </article>
         </div>
+      </section>
+
+      <section className="card limited-card">
+        <h2>Cupo limitado</h2>
+        <p>
+          Solo se aceptaran <strong>10 equipos</strong>. El registro se cerrara al completar
+          cupo, aun si la fecha limite no ha llegado.
+        </p>
+        <p><strong>No te quedes afuera: registra tu equipo cuanto antes.</strong></p>
+      </section>
+
+      <section className="card">
+        <h2>Fechas clave de registro y pago</h2>
+        <ul>
+          <li>Registro de equipos: hasta el lunes 23 de marzo de 2026, 23:59 h.</li>
+          <li>Limite de pago: martes 24 de marzo de 2026, 18:00 h.</li>
+          <li>Confirmacion de equipos validados: martes 24 de marzo de 2026, 20:00 h.</li>
+        </ul>
+      </section>
+
+      <section className="card">
+        <h2>Formato de competencia</h2>
+        <ul>
+          <li>Duracion: 5 horas continuas de competencia.</li>
+          <li>Banco estimado: 8 a 12 problemas algoritmicos.</li>
+          <li>Sistema de puntuacion y penalizacion: formato ACM/ICPC.</li>
+          <li>Lenguajes permitidos: C++, Java y Python.</li>
+          <li>Envios y veredicto: a traves de la plataforma omegaUp.</li>
+        </ul>
       </section>
 
       <section className="card">
@@ -151,8 +246,10 @@ export function ConcursoPage() {
         <h2>Registro y pago</h2>
         <p>
           Para completar tu registro se requiere formulario, integrantes y comprobante.
-          Revisa los requisitos antes de enviar.
+          La cuota de recuperacion es de $100.00 MXN por equipo. Revisa los requisitos
+          antes de enviar.
         </p>
+        <p className="limit-hype">Cupo limitado a 10 equipos. Registro por orden de confirmacion.</p>
         <div className="inline-actions">
           <a className="button primary" href="#" target="_blank" rel="noreferrer">
             Abrir formulario
@@ -185,6 +282,7 @@ export function ConcursoPage() {
           <li>Nombre de equipo y escuela de procedencia.</li>
           <li>Datos de 1 a 3 participantes.</li>
           <li>Correo y telefono de contacto del capitan.</li>
+          <li>Cuota de recuperacion: $100.00 MXN por equipo.</li>
           <li>Comprobante de pago legible.</li>
         </ul>
       </Modal>
@@ -197,6 +295,7 @@ export function ConcursoPage() {
         <p>Banco: Por confirmar</p>
         <p>Cuenta/CLABE: Por confirmar</p>
         <p>Titular: Por confirmar</p>
+        <p>Monto: $100.00 MXN</p>
         <p>Concepto: Concurso 1.er aniversario CAP ITM (actividad 61 aniversario Tec) + nombre del equipo</p>
       </Modal>
 
