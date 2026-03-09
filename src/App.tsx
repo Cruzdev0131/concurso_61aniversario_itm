@@ -16,8 +16,9 @@ function App() {
 
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<ConcursoPage />} />
           <Route path="/concurso" element={<ConcursoPage />} />
+          <Route path="/sabias-que" element={<HomePage />} />
           <Route path="/recursos" element={<RecursosPage />} />
         </Routes>
       </AnimatePresence>
@@ -43,7 +44,8 @@ function App() {
 
           <section className="footer-block">
             <h4>Enlaces</h4>
-            <a href="/concurso">Convocatoria y registro</a>
+            <a href="/">Convocatoria y registro</a>
+            <a href="/sabias-que">Sabias que?</a>
             <a href="/recursos">Recursos y FAQ</a>
             <a href="#">Aviso de privacidad</a>
           </section>

@@ -23,9 +23,9 @@ export function SiteHeader() {
             </NavLink>
             <NavLink
               className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
-              to="/concurso"
+              to="/sabias-que"
             >
-              Concurso
+              Sabias que?
             </NavLink>
             <NavLink
               className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
@@ -43,9 +43,9 @@ export function SiteHeader() {
         </NavLink>
         <NavLink
           className={({ isActive }) => `mobile-nav-link${isActive ? ' active' : ''}`}
-          to="/concurso"
+          to="/sabias-que"
         >
-          Concurso
+          Sabias que?
         </NavLink>
         <NavLink
           className={({ isActive }) => `mobile-nav-link${isActive ? ' active' : ''}`}

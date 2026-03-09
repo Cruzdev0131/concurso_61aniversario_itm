@@ -46,16 +46,16 @@ export function HomePage() {
   return (
     <AnimatedPage className="page">
       <section className="hero hero-home">
-        <p className="eyebrow">Programacion Competitiva en Mexico</p>
-        <h1>Resolver problemas bien hoy abre oportunidades grandes manana</h1>
+        <p className="eyebrow">Sabias que?</p>
+        <h1>La programacion competitiva puede acelerar tu perfil profesional</h1>
         <p className="subtitle">
           En el ecosistema mexicano, la programacion competitiva impulsa talento en
           algoritmos, colaboracion tecnica y velocidad de implementacion.
         </p>
 
         <div className="hero-actions">
-          <Link className="button primary" to="/concurso">
-            Ver concurso ITM
+          <Link className="button primary" to="/">
+            Ir al concurso
           </Link>
           <button className="button ghost" type="button" onClick={() => setIsModalOpen(true)}>
             Datos de impacto
