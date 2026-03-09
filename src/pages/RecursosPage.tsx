@@ -2,25 +2,24 @@ import { motion } from 'framer-motion'
 import { AnimatedPage } from '../components/AnimatedPage'
 
 const schedule = [
-  { label: '08:00', detail: 'Registro y check-in de equipos' },
-  { label: '09:00', detail: 'Bienvenida y briefing tecnico' },
-  { label: '09:30', detail: 'Inicio de competencia' },
-  { label: '14:30', detail: 'Cierre de envios' },
-  { label: '15:00', detail: 'Resultados y premiacion' },
+  { label: '14:30', detail: 'Acomodo y apertura' },
+  { label: '15:00', detail: 'Inicio de competencia' },
+  { label: '18:30', detail: 'Cierre de envios' },
+  { label: '19:00', detail: 'Clausura y premiacion' },
 ]
 
 const faq = [
   {
     question: 'Que lenguajes se permiten?',
-    answer: 'Generalmente C++, Java y Python, sujeto a la convocatoria final.',
+    answer: 'C++, Java y Python en la plataforma omegaUp.',
   },
   {
     question: 'Habra internet durante la competencia?',
     answer: 'No, salvo acceso a recursos definidos por el comite organizador.',
   },
   {
-    question: 'Se puede registrar mas de un equipo por escuela?',
-    answer: 'Si, siempre que cada participante este en un solo equipo.',
+    question: 'Cual es el cupo maximo y la fecha limite?',
+    answer: 'Cupo maximo de 10 equipos. Limite de inscripcion y pago: 18 de marzo de 2026.',
   },
 ]
 
@@ -31,13 +30,13 @@ export function RecursosPage() {
         <p className="eyebrow">Recursos del Evento</p>
         <h1>Todo para competir con buena preparacion</h1>
         <p className="subtitle">
-          Consulta guia rapida, horarios de referencia, preguntas frecuentes y
+          Consulta guia rapida, agenda oficial, preguntas frecuentes y
           materiales recomendados de entrenamiento.
         </p>
       </section>
 
       <section className="card">
-        <h2>Horario de referencia</h2>
+        <h2>Agenda oficial (25 de marzo de 2026)</h2>
         <div className="timeline">
           {schedule.map((item) => (
             <motion.div

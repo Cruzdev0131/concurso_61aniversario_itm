@@ -12,7 +12,7 @@ const confettiPieces = [
   { id: 6, top: 30, left: 94, size: 6, color: '#ffd97a', delay: 1.1 },
 ]
 
-const EVENT_DATE = new Date('2026-03-25T09:00:00-06:00')
+const EVENT_DATE = new Date('2026-03-25T15:00:00-06:00')
 
 function getTimeLeft() {
   const diff = EVENT_DATE.getTime() - Date.now()
@@ -128,7 +128,8 @@ export function ConcursoPage() {
       <section className="card">
         <h2>Cuenta regresiva al concurso</h2>
         <p className="subtitle">
-          Inicio programado para el miercoles 25 de marzo de 2026 a las 09:00 h (hora del centro de Mexico).
+          Inicio programado para el miercoles 25 de marzo de 2026 a las 3:00 p.m.
+          (hora del centro de Mexico).
         </p>
         {timeLeft.ended ? (
           <p><strong>El concurso ya esta en curso o finalizo.</strong></p>
@@ -163,7 +164,7 @@ export function ConcursoPage() {
           </article>
           <article>
             <h3>Horario</h3>
-            <p>Por confirmar</p>
+            <p>Inicio 3:00 p.m. - Fin 6:30 p.m.</p>
           </article>
           <article>
             <h3>Lugar</h3>
@@ -188,6 +189,16 @@ export function ConcursoPage() {
         </div>
       </section>
 
+      <section className="card">
+        <h2>Agenda del 25 de marzo de 2026</h2>
+        <ul>
+          <li>Acomodo y apertura: 2:30 p.m.</li>
+          <li>Hora de inicio: 3:00 p.m.</li>
+          <li>Hora de fin: 6:30 p.m.</li>
+          <li>Clausura y premiacion: 7:00 p.m.</li>
+        </ul>
+      </section>
+
       <section className="card limited-card">
         <h2>Cupo limitado</h2>
         <p>
@@ -200,16 +211,16 @@ export function ConcursoPage() {
       <section className="card">
         <h2>Fechas clave de registro y pago</h2>
         <ul>
-          <li>Registro de equipos: hasta el lunes 23 de marzo de 2026, 23:59 h.</li>
-          <li>Limite de pago: martes 24 de marzo de 2026, 18:00 h.</li>
-          <li>Confirmacion de equipos validados: martes 24 de marzo de 2026, 20:00 h.</li>
+          <li>Limite de inscripcion y pago: miercoles 18 de marzo de 2026, 23:59 h.</li>
+          <li>El formulario solicita comprobante de pago, por eso ambos limites son el mismo dia.</li>
+          <li>Confirmacion de equipos validados: jueves 19 de marzo de 2026.</li>
         </ul>
       </section>
 
       <section className="card">
         <h2>Formato de competencia</h2>
         <ul>
-          <li>Duracion: 5 horas continuas de competencia.</li>
+          <li>Duracion de competencia: 3 horas 30 minutos.</li>
           <li>Banco estimado: 8 a 12 problemas algoritmicos.</li>
           <li>Sistema de puntuacion y penalizacion: formato ACM/ICPC.</li>
           <li>Lenguajes permitidos: C++, Java y Python.</li>
@@ -249,7 +260,10 @@ export function ConcursoPage() {
           La cuota de recuperacion es de $100.00 MXN por equipo. Revisa los requisitos
           antes de enviar.
         </p>
-        <p className="limit-hype">Cupo limitado a 10 equipos. Registro por orden de confirmacion.</p>
+        <p className="deadline-note">
+          <strong>Limite de inscripcion y pago:</strong> 18 de marzo de 2026.
+          <span> Cupo limitado a 10 equipos.</span>
+        </p>
         <div className="inline-actions">
           <a className="button primary" href="#" target="_blank" rel="noreferrer">
             Abrir formulario
