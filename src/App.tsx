@@ -79,6 +79,7 @@ function App() {
 
         <div className="footer-bottom">
           <p>Concurso de Programacion Competitiva ITM 2026</p>
+          <p>Desarrollado por CruzDev</p>
           <p>Todos los derechos reservados</p>
         </div>
       </footer>
