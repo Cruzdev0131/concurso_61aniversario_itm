@@ -30,8 +30,8 @@ function App() {
               alt="Logo horizontal TecNM"
               className="footer-tecnm-logo"
             />
-            <p>Instituto Tecnologico de Morelia - 61 aniversario</p>
-            <p>Capitulo de Algoritmia y Programacion Competitiva ITM</p>
+            <p>Instituto Tecnologico de Morelia - 61 aniversario del Tec</p>
+            <p>Primer aniversario del Capitulo de Algoritmia y Programacion Competitiva ITM</p>
           </section>
 
           <section className="footer-block">
@@ -50,7 +50,7 @@ function App() {
         </div>
 
         <div className="footer-bottom">
-          <p>Concurso de Programacion Competitiva ITM 2026</p>
+          <p>Concurso de Programacion Competitiva ITM 2026 - aniversario del CAP ITM</p>
           <p>Todos los derechos reservados</p>
         </div>
       </footer>

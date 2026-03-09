@@ -8,10 +8,11 @@ export function ConcursoPage() {
   return (
     <AnimatedPage className="page">
       <section className="hero">
-        <p className="eyebrow">ITM - 61 Aniversario</p>
+        <p className="eyebrow">1.er aniversario del Capitulo APC ITM</p>
         <h1>Concurso de Programacion Competitiva</h1>
         <p className="subtitle">
-          Organizado por el Capitulo de Algoritmia y Programacion Competitiva ITM.
+          Concurso conmemorativo por el primer aniversario del Capitulo de Algoritmia y
+          Programacion Competitiva ITM, realizado como actividad del 61 aniversario del Tec.
           Encuentra aqui toda la informacion operativa del evento.
         </p>
       </section>
@@ -103,7 +104,7 @@ export function ConcursoPage() {
         <p>Banco: Por confirmar</p>
         <p>Cuenta/CLABE: Por confirmar</p>
         <p>Titular: Por confirmar</p>
-        <p>Concepto: Concurso 61 Aniversario ITM + nombre del equipo</p>
+        <p>Concepto: Concurso 1.er aniversario CAP ITM (actividad 61 aniversario Tec) + nombre del equipo</p>
       </Modal>
     </AnimatedPage>
   )
