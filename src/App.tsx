@@ -17,8 +17,9 @@ function App() {
 
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<ConcursoPage />} />
           <Route path="/concurso" element={<ConcursoPage />} />
+          <Route path="/sabias-que" element={<HomePage />} />
           <Route path="/recursos" element={<RecursosPage />} />
         </Routes>
       </AnimatePresence>
@@ -31,8 +32,8 @@ function App() {
               alt="Logo horizontal TecNM"
               className="footer-tecnm-logo"
             />
-            <p>Instituto Tecnologico de Morelia - 61 aniversario</p>
-            <p>Capitulo de Algoritmia y Programacion Competitiva ITM</p>
+            <p>Instituto Tecnologico de Morelia - 61 aniversario del Tec</p>
+            <p>Primer aniversario del Capitulo de Algoritmia y Programacion Competitiva ITM</p>
           </section>
 
           <section className="footer-block">
@@ -66,20 +67,29 @@ function App() {
 
           <section className="footer-block">
             <h4>Enlaces</h4>
-            <a href="/concurso">Convocatoria y registro</a>
+            <a href="/">Convocatoria y registro</a>
             <a href="/recursos">Recursos y FAQ</a>
+<<<<<<< HEAD
             <a href="https://whatsapp.com/channel/0029Vb7Iuq1BA1f4srngcy2N" target="_blank" rel="noreferrer">
               <FaWhatsapp aria-hidden="true" /> Canal de WhatsApp
             </a>
             <a href="https://algoritmiaitm.vercel.app" target="_blank" rel="noreferrer">
               Unete o conoce mas de nosotros
             </a>
+=======
+            <a href="/sabias-que">Sabias que?</a>
+            <a href="#">Aviso de privacidad</a>
+>>>>>>> a317d6ad2d88220de7ccf75a6ea462d00e648ae1
           </section>
         </div>
 
         <div className="footer-bottom">
+<<<<<<< HEAD
           <p>Concurso de Programacion Competitiva ITM 2026</p>
           <p>Desarrollado por CruzDev</p>
+=======
+          <p>Concurso de Programacion Competitiva ITM 2026 - aniversario del CAP ITM</p>
+>>>>>>> a317d6ad2d88220de7ccf75a6ea462d00e648ae1
           <p>Todos los derechos reservados</p>
         </div>
       </footer>
@@ -88,3 +98,4 @@ function App() {
 }
 
 export default App
+
