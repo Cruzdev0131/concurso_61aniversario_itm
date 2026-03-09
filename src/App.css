@@ -119,13 +119,31 @@
   line-height: 1;
   padding: 0.7rem 0.4rem;
   border-radius: 999px;
-  border: 1px solid transparent;
+  border: 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.mobile-nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0.28rem;
+  width: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: #f2c766;
+  transform: translateX(-50%);
+  transition: width 0.2s ease;
 }
 
 .mobile-nav-link.active {
-  background: linear-gradient(145deg, #f2c766, #d49b1b);
-  color: #4d2f08;
-  border-color: rgba(255, 244, 214, 0.6);
+  background: transparent;
+  color: #f9d27d;
+}
+
+.mobile-nav-link.active::after {
+  width: 22px;
 }
 
 .page {
@@ -557,6 +575,9 @@
 
   .brand {
     margin: 0 auto;
+    border: 0;
+    background: transparent;
+    padding: 0;
   }
 
   .page {
