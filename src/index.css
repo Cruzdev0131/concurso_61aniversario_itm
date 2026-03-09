@@ -1,0 +1,42 @@
+:root {
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #2b171d;
+  background: #f6f1ed;
+  --color-guinda-900: #5f0f29;
+  --color-guinda-700: #7c1736;
+  --color-guinda-500: #9a1f43;
+  --color-mostaza-500: #d4a017;
+  --color-mostaza-300: #e7c25b;
+  --color-paper: #fffdf9;
+  --color-ink: #2b171d;
+  --color-muted: #6a4f57;
+  --color-border: #eadfda;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
