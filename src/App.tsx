@@ -69,27 +69,21 @@ function App() {
             <h4>Enlaces</h4>
             <a href="/">Convocatoria y registro</a>
             <a href="/recursos">Recursos y FAQ</a>
-<<<<<<< HEAD
             <a href="https://whatsapp.com/channel/0029Vb7Iuq1BA1f4srngcy2N" target="_blank" rel="noreferrer">
               <FaWhatsapp aria-hidden="true" /> Canal de WhatsApp
             </a>
             <a href="https://algoritmiaitm.vercel.app" target="_blank" rel="noreferrer">
               Unete o conoce mas de nosotros
             </a>
-=======
             <a href="/sabias-que">Sabias que?</a>
             <a href="#">Aviso de privacidad</a>
->>>>>>> a317d6ad2d88220de7ccf75a6ea462d00e648ae1
           </section>
         </div>
 
         <div className="footer-bottom">
-<<<<<<< HEAD
           <p>Concurso de Programacion Competitiva ITM 2026</p>
           <p>Desarrollado por CruzDev</p>
-=======
           <p>Concurso de Programacion Competitiva ITM 2026 - aniversario del CAP ITM</p>
->>>>>>> a317d6ad2d88220de7ccf75a6ea462d00e648ae1
           <p>Todos los derechos reservados</p>
         </div>
       </footer>
