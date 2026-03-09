@@ -23,15 +23,15 @@ export function SiteHeader() {
             </NavLink>
             <NavLink
               className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
-              to="/sabias-que"
-            >
-              Sabias que?
-            </NavLink>
-            <NavLink
-              className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
               to="/recursos"
             >
               Recursos
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+              to="/sabias-que"
+            >
+              Sabias que?
             </NavLink>
           </nav>
         </div>
@@ -43,15 +43,15 @@ export function SiteHeader() {
         </NavLink>
         <NavLink
           className={({ isActive }) => `mobile-nav-link${isActive ? ' active' : ''}`}
-          to="/sabias-que"
-        >
-          Sabias que?
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => `mobile-nav-link${isActive ? ' active' : ''}`}
           to="/recursos"
         >
           Recursos
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => `mobile-nav-link${isActive ? ' active' : ''}`}
+          to="/sabias-que"
+        >
+          Sabias que?
         </NavLink>
       </nav>
     </>

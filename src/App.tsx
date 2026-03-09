@@ -45,8 +45,8 @@ function App() {
           <section className="footer-block">
             <h4>Enlaces</h4>
             <a href="/">Convocatoria y registro</a>
-            <a href="/sabias-que">Sabias que?</a>
             <a href="/recursos">Recursos y FAQ</a>
+            <a href="/sabias-que">Sabias que?</a>
             <a href="#">Aviso de privacidad</a>
           </section>
         </div>
@@ -61,3 +61,4 @@ function App() {
 }
 
 export default App
+
