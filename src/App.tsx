@@ -75,6 +75,7 @@ function App() {
             <a href="https://algoritmiaitm.vercel.app" target="_blank" rel="noreferrer">
               Unete o conoce mas de nosotros
             </a>
+            <a href="/sabias-que">Sabias que?</a>
           </section>
         </div>
 
