@@ -100,8 +100,8 @@
   left: 50%;
   bottom: calc(0.55rem + env(safe-area-inset-bottom));
   transform: translateX(-50%);
-  width: min(92vw, 420px);
-  padding: 0.34rem;
+  width: min(80vw, 336px);
+  padding: 0.3rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 234, 192, 0.5);
   background: linear-gradient(145deg, rgba(83, 16, 39, 0.94), rgba(119, 23, 55, 0.94));
@@ -697,8 +697,8 @@
   }
 
   .mobile-island-nav {
-    width: min(94vw, 360px);
-    padding: 0.3rem;
+    width: min(84vw, 300px);
+    padding: 0.28rem;
   }
 
   .mobile-nav-link {
