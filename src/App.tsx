@@ -75,14 +75,10 @@ function App() {
             <a href="https://algoritmiaitm.vercel.app" target="_blank" rel="noreferrer">
               Unete o conoce mas de nosotros
             </a>
-            <a href="/sabias-que">Sabias que?</a>
-            <a href="#">Aviso de privacidad</a>
           </section>
         </div>
 
         <div className="footer-bottom">
-          <p>Concurso de Programacion Competitiva ITM 2026</p>
-          <p>Desarrollado por CruzDev</p>
           <p>Concurso de Programacion Competitiva ITM 2026 - aniversario del CAP ITM</p>
           <p>Todos los derechos reservados</p>
         </div>
