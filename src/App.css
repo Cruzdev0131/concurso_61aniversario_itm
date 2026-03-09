@@ -106,6 +106,79 @@
   box-shadow: 0 15px 28px rgba(10, 24, 34, 0.16);
 }
 
+.hero-anniversary {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-anniversary > * {
+  position: relative;
+  z-index: 1;
+}
+
+.confetti-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.confetti-piece {
+  position: absolute;
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px rgba(255, 244, 214, 0.35);
+}
+
+.anniversary-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.anniversary-badge {
+  width: 68px;
+  height: 68px;
+  border-radius: 999px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border: 2px solid rgba(255, 230, 164, 0.75);
+  background:
+    radial-gradient(circle at 28% 25%, #fff2c4 0%, #f6cc66 45%, #d79c1f 100%);
+  box-shadow: 0 10px 24px rgba(5, 8, 18, 0.26);
+}
+
+.anniversary-glow {
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 232, 176, 0.65);
+}
+
+.anniversary-number {
+  font-size: 2.2rem;
+  line-height: 1;
+  font-weight: 800;
+  color: #59260f;
+}
+
+.anniversary-label {
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #59260f;
+}
+
+.anniversary-kicker {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: #fff3da;
+}
+
 .hero-home {
   background: linear-gradient(135deg, var(--color-guinda-700), #8d1a40, var(--color-mostaza-500));
 }
@@ -429,5 +502,24 @@
 
   .footer-bottom {
     justify-content: flex-start;
+  }
+
+  .anniversary-badge {
+    width: 56px;
+    height: 56px;
+  }
+
+  .anniversary-number {
+    font-size: 1.85rem;
+  }
+
+  .anniversary-label {
+    top: 13px;
+    right: 11px;
+    font-size: 0.64rem;
+  }
+
+  .anniversary-kicker {
+    font-size: 0.93rem;
   }
 }
