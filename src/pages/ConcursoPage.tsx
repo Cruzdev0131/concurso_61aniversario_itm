@@ -142,13 +142,7 @@ export function ConcursoPage() {
         <h2>Convocatoria y reglamento</h2>
         <div className="links">
           <a href="#" target="_blank" rel="noreferrer">
-            Descargar convocatoria (PDF)
-          </a>
-          <a href="#" target="_blank" rel="noreferrer">
-            Reglamento completo
-          </a>
-          <a href="#" target="_blank" rel="noreferrer">
-            Aviso de privacidad
+            Descargar convocatoria (incluye reglamento y aviso de privacidad)
           </a>
         </div>
       </section>
