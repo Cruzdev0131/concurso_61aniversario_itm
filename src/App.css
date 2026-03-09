@@ -33,12 +33,12 @@
 .brand {
   text-decoration: none;
   border-radius: 12px;
-  padding: 0.04rem 0.2rem;
+  padding: 0;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid rgba(255, 241, 209, 0.7);
-  background: rgba(255, 248, 233, 0.14);
+  border: 0;
+  background: transparent;
   line-height: 0;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -64,7 +64,7 @@
 }
 
 .brand:hover {
-  background: rgba(255, 237, 193, 0.16);
+  background: transparent;
 }
 
 .navbar {
@@ -554,9 +554,9 @@
 
 @media (hover: hover) {
   .brand:hover {
-    background: rgba(255, 237, 193, 0.16);
-    transform: translateY(-1px);
-    box-shadow: 0 8px 16px rgba(22, 9, 15, 0.2);
+    background: transparent;
+    transform: none;
+    box-shadow: none;
   }
 
   .nav-link:hover {
