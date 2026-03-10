@@ -265,7 +265,12 @@ export function ConcursoPage() {
           <span> Cupo limitado a 10 equipos.</span>
         </p>
         <div className="inline-actions">
-          <a className="button primary" href="#" target="_blank" rel="noreferrer">
+          <a
+            className="button primary"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfYfM3o6L0GsDMvMlVbnGX55w6o3WF_IO3rBrVRJ3A5zfKC1A/viewform?usp=header"
+            target="_blank"
+            rel="noreferrer"
+          >
             Abrir formulario
           </a>
           <button className="button soft" type="button" onClick={() => setOpenModal('registro')}>
@@ -280,9 +285,10 @@ export function ConcursoPage() {
       <section className="card">
         <h2>Premiacion y reglas base</h2>
         <ul>
-          <li>1.er lugar: reconocimiento y premio especial.</li>
-          <li>2.do lugar: reconocimiento y premio.</li>
-          <li>3.er lugar: reconocimiento.</li>
+          <li>Primer lugar: constancia, reconocimiento y premio especial.</li>
+          <li>Segundo lugar: constancia y reconocimiento.</li>
+          <li>Tercer lugar: constancia y reconocimiento.</li>
+          <li>Los demas lugares: constancia de participacion.</li>
           <li>Penalizacion por tiempo segun formato ACM/ICPC.</li>
         </ul>
       </section>
