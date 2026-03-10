@@ -123,6 +123,7 @@
   border-radius: 999px;
   border: 0;
   position: relative;
+  white-space: nowrap;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -273,6 +274,7 @@
   border: 1px solid rgba(255, 220, 136, 0.55);
   border-radius: 999px;
   padding: 0.35rem 0.75rem;
+  max-width: 100%;
 }
 
 .deadline-note {
@@ -523,6 +525,11 @@
   gap: 0.45rem;
 }
 
+.footer-line span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .footer-line svg {
   margin-top: 0.15rem;
   flex-shrink: 0;
@@ -736,7 +743,7 @@
 
   .mobile-island-nav {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr 1.15fr;
     gap: 0.28rem;
   }
 
@@ -899,13 +906,13 @@
   }
 
   .mobile-island-nav {
-    width: min(84vw, 300px);
+    width: min(84vw, 306px);
     padding: 0.28rem;
   }
 
   .mobile-nav-link {
-    font-size: 0.81rem;
-    padding: 0.62rem 0.34rem;
+    font-size: 0.78rem;
+    padding: 0.58rem 0.28rem;
   }
 
   .hero h1 {

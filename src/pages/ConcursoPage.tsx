@@ -247,7 +247,11 @@ export function ConcursoPage() {
       <section className="card" id="documentos">
         <h2>Convocatoria y reglamento</h2>
         <div className="links">
-          <a href="#" target="_blank" rel="noreferrer">
+          <a
+            href="https://drive.google.com/drive/folders/1A82bfHsPky9mSOuNxsFpAUBsCOvvsiIL?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
             Descargar convocatoria (incluye reglamento y aviso de privacidad)
           </a>
         </div>
